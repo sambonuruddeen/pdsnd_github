@@ -20,12 +20,14 @@ def get_filters():
     city = input("Enter a city name (chicago, new york city, washington):")
     while city not in CITY_DATA:
         city = input("Unkown city name. Choose city from this lsit - (chicago, new york city, washington)")
+        city = city.casefold()
 
     # TO DO: get user input for month (all, january, february, ... , june)
     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     month = input("Enter month from January to June or enter all")
     while month not in months:
         month = input("Error! Enter month from January to June or enter all")
+        
  
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
