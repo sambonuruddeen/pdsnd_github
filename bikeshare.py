@@ -27,6 +27,7 @@ def get_filters():
     month = input("Enter month from January to June or enter all")
     while month not in months:
         month = input("Error! Enter month from January to June or enter all")
+        month = month.casefold()
         
  
 
