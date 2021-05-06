@@ -18,5 +18,5 @@ Using Python to understand U.S. bikeshare data. Calculate statistics and build a
 1. new york city.csv
 
 ### Credits
-[Introduction to Markdown Syntax on GitHub] (https://nuruddeen.hashnode.dev/introduction-to-markdown-syntax-on-github)
+[Introduction to Markdown Syntax on GitHub](https://nuruddeen.hashnode.dev/introduction-to-markdown-syntax-on-github)
 
