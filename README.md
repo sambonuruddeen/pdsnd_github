@@ -12,10 +12,10 @@ Using Python to understand U.S. bikeshare data. Calculate statistics and build a
 
 
 ### Files used
-1. bikeshare.py
-1. washington.csv
-1. chicago.csv
-1. new york city.csv
+1. Bikeshare.py
+1. Washington.csv
+1. Chicago.csv
+1. New york city.csv
 
 ### Credits
 [Introduction to Markdown Syntax on GitHub](https://nuruddeen.hashnode.dev/introduction-to-markdown-syntax-on-github)
