@@ -20,14 +20,14 @@ def get_filters():
     city = input("Enter a city name (chicago, new york city, washington):")
     while city not in CITY_DATA:
         city = input("Unkown city name. Choose city from this lsit - (chicago, new york city, washington)")
-        city = city.casefold()
+        city = city.lower()
 
     # TO DO: get user input for month (all, january, february, ... , june)
     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     month = input("Enter month from January to June or enter all")
     while month not in months:
         month = input("Error! Enter month from January to June or enter all")
-        month = month.casefold()
+        month = month.lower()
         
  
 
@@ -36,7 +36,7 @@ def get_filters():
     day = input("Enter day from Monday to Sunday or enter all")
     while day not in days:
         day = input("Error! Enter day from Monday to Sunday or enter all")
-
+        day = day.lower()
 
     print('-'*40)
     return city, month, day
@@ -65,7 +65,7 @@ def load_data(city, month, day):
     # Filtering by month
     if month != 'all':
         months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
+        month = months.index(month)
         
         df = df[df['month']==month]
         
@@ -180,6 +180,13 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+        
+        view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n')
+        start_loc = 0
+        while (view_data == 'yes'):
+            print(df.iloc[start_loc: start_loc + 5])
+            start_loc += 5
+            view_data = input("Do you wish to continue?: ").lower()
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
